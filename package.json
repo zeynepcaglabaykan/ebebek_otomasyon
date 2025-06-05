@@ -1,0 +1,19 @@
+{
+  "name": "e-bebek-automation",
+  "version": "1.0.0",
+  "description": "E-Bebek automation project",
+  "scripts": {
+    "test": "cucumber-js --require tests/cucumber.conf.js --require step_definitions/**/*.js --format json:allure-results/result.json --format html:report.html",
+    "test:pretty": "cucumber-js --require tests/cucumber.conf.js --require step_definitions/**/*.js --format @cucumber/pretty-formatter",
+    "report": "allure generate allure-results -o allure-report --clean && allure open allure-report"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^8.0.0",
+    "@playwright/test": "^1.30.0",
+    "allure-commandline": "^2.20.1",
+    "allure-cucumberjs": "^2.0.0",
+    "chai": "^4.3.6",
+    "cucumber-html-reporter": "^5.5.0",
+    "playwright": "^1.30.0"
+  }
+}
